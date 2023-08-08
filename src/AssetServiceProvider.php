@@ -17,7 +17,7 @@ class AssetServiceProvider extends ServiceProvider
     {
         Nova::serving(function (ServingNova $event) {
             Nova::script('primevue', __DIR__ . '/../dist/js/asset.js');
-            Nova::style('primevue', __DIR__ . '/../dist/css/asset.css');
+//            Nova::style('primevue', __DIR__ . '/../dist/css/asset.css');
         });
     }
 
