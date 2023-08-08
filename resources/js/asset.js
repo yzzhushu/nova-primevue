@@ -38,6 +38,10 @@ Nova.booting(app => {
                 },
                 emptymessage: {
                     class: 'mt-2'
+                },
+                item: {
+                    class: 'cursor-pointer list-box-item',
+                    style: 'line-height: 40px'
                 }
             }
         }
