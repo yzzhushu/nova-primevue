@@ -4,9 +4,9 @@
 
 ### Requirements
 
-- `php: ^7.3|^8.0`
+- `php: ^8.1`
 - `laravel/framework: ^10.10`
-- `laravel/nova: ^4.0`
+- `laravel/nova: ~4.0`
 
 ### Supported Components
 
