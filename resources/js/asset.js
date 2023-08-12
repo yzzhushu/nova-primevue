@@ -2,6 +2,9 @@ import PrimeVue from "primevue/config";
 import Listbox from "primevue/listbox";
 import Splitter from 'primevue/splitter';
 import SplitterPanel from 'primevue/splitterpanel';
+import DataTable from "primevue/datatable";
+import Column from "primevue/column";
+import HxTable from "./components/HxTable.vue";
 
 Nova.booting(app => {
     app.use(PrimeVue, {
@@ -43,6 +46,16 @@ Nova.booting(app => {
                     class: 'cursor-pointer list-box-item',
                     style: 'line-height: 40px'
                 }
+            },
+            DataTable: {
+                root: 'w-full',
+                table: 'w-full divide-y divide-gray-100 dark:divide-gray-700',
+                thead: 'bg-gray-50 dark:bg-gray-800',
+                tbody: 'divide-y divide-gray-100 dark:divide-gray-700'
+            },
+            Column: {
+                headercell: 'text-center',
+                bodycell: 'text-center'
             }
         }
     });
@@ -50,4 +63,7 @@ Nova.booting(app => {
     app.component("Listbox", Listbox);
     app.component("Splitter", Splitter);
     app.component("SplitterPanel", SplitterPanel);
+    app.component("DataTable", DataTable);
+    app.component("Column", Column);
+    app.component("HxTable", HxTable);
 });
