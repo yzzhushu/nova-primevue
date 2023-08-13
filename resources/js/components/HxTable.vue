@@ -17,12 +17,20 @@ const prop = defineProps({
     scrollerOption: {
         type: JSON,
         default: {
-            itemSize: 40
+            itemSize: 36
+        }
+    },
+    pt: {
+        type: JSON,
+        default: {
+            root: 'mt-1 mb-1',
+            headerrow: {
+                style: 'height: 32px'
+            }
         }
     }
 });
 const emit = defineEmits(['row:selected']);
-
 </script>
 
 <template>
@@ -33,7 +41,14 @@ const emit = defineEmits(['row:selected']);
         :value="lists"
         selectionMode="single"
         @rowSelect="emit('row:selected', $event)"
+        removableSort
+        :pt="pt"
     >
-        <Column v-for="column of columns" :field="column.field" :header="column.header"></Column>
+        <Column
+            v-for="column of columns"
+            :field="column.field"
+            :header="column.header"
+            :sortable="column.sort"
+        />
     </DataTable>
 </template>

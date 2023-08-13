@@ -21,7 +21,7 @@ Nova.booting(app => {
             },
             SplitterPanel: {
                 root: {
-                    class: 'flex align-items-center justify-content-center'
+                    class: 'flex items-center justify-center'
                 }
             },
             Listbox: {
@@ -50,12 +50,16 @@ Nova.booting(app => {
             DataTable: {
                 root: 'w-full',
                 table: 'w-full divide-y divide-gray-100 dark:divide-gray-700',
-                thead: 'bg-gray-50 dark:bg-gray-800',
+                thead: 'bg-gray-50 dark:bg-gray-800 top-0 z-10',
                 tbody: 'divide-y divide-gray-100 dark:divide-gray-700'
             },
             Column: {
                 headercell: 'text-center',
-                bodycell: 'text-center'
+                bodycell: 'text-center',
+                sorticon: {
+                    class: 'ml-1',
+                    style: 'margin-top: -4px;'
+                }
             }
         }
     });
