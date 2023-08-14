@@ -10,41 +10,20 @@ Nova.booting(app => {
         unstyled: true,
         pt: {
             Splitter: {
-                root: {
-                    class: 'w-full rounded-lg form-input-bordered form-control form-input'
-                },
+                root: 'w-full rounded-lg form-input-bordered form-control form-input',
                 gutter: {
                     class: 'bg-gray-300 dark:bg-gray-700 ml-3 mr-3',
                     style: 'cursor: col-resize'
                 }
             },
-            SplitterPanel: {
-                root: {
-                    class: 'flex items-center justify-center'
-                }
-            },
+            SplitterPanel: 'flex items-center justify-center',
             Listbox: {
-                root: {
-                    class: 'w-full h-full text-center'
-                },
-                header: {
-                    style: 'height: 40px;',
-                    class: 'w-full mt-2 mb-2'
-                },
-                filtercontainer: {
-                    class: 'w-full h-full form-control form-input form-input-bordered flex items-center justify-center'
-                },
-                filterinput: {
-                    class: 'w-full h-full text-center',
-                    style: 'outline: none;background-color: transparent;'
-                },
-                emptymessage: {
-                    class: 'mt-2'
-                },
-                item: {
-                    class: 'cursor-pointer list-box-item',
-                    style: 'line-height: 40px'
-                }
+                root: 'w-full h-full text-center',
+                header: 'w-full h-10 mt-2 mb-2',
+                filtercontainer: 'w-full h-full form-control form-input form-input-bordered flex items-center justify-center',
+                filterinput: 'w-full h-full text-center outline-none bg-transparent',
+                emptymessage: 'mt-2',
+                item: 'cursor-pointer'
             },
             DataTable: {
                 root: 'w-full',

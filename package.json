@@ -17,6 +17,6 @@
         "vue-loader": "^16.8.3"
     },
     "dependencies": {
-        "primevue": "^3.31.0"
+        "primevue": "^3.32.0"
     }
 }
