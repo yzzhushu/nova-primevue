@@ -15,7 +15,7 @@ defineProps({
     scrollOption: {
         type: JSON,
         default: {
-            itemSize: 32
+            itemSize: 40
         }
     },
     pt: {
