@@ -16,20 +16,22 @@ Nova.booting(app => {
                     style: 'cursor: col-resize'
                 }
             },
-            SplitterPanel: 'flex items-center justify-center',
+            SplitterPanel: {
+                root: 'flex items-center justify-center'
+            },
             Listbox: {
                 root: 'w-full h-full text-center',
                 header: 'w-full h-10 mt-2 mb-2',
                 filtercontainer: 'w-full h-full form-control form-input form-input-bordered flex items-center justify-center',
                 filterinput: 'w-full h-full text-center outline-none bg-transparent',
                 emptymessage: 'mt-2',
-                item: 'cursor-pointer hx-line-column'
+                item: 'cursor-pointer hx-list-column'
             },
             DataTable: {
                 root: 'w-full',
                 table: 'w-full',
                 thead: 'bg-gray-50 dark:bg-gray-800 top-0 z-10',
-                bodyrow: 'cursor-pointer',
+                bodyrow: 'cursor-pointer hx-list-column',
             },
             Column: {
                 headercell: 'text-center',

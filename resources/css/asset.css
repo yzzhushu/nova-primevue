@@ -27,7 +27,7 @@
     transform-origin: 0 0;
     pointer-events: none;
 }
-.hx-line-column:hover {
+.hx-list-column:hover {
     color: #495057;
     background: #e9ecef;
 }

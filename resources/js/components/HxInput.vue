@@ -22,7 +22,7 @@ defineProps({
 	},
 	defaultClass: {
 		type: String,
-		default: 'w-full form-control form-input form-input-bordered border-none shadow-none outline-none'
+		default: 'w-full form-control form-input form-input-bordered border-none outline-none'
 	}
 });
 defineEmits(['update:value']);
@@ -32,7 +32,7 @@ defineEmits(['update:value']);
 	<textarea
 		v-if="isTextArea"
 		:class="defaultClass + ' ' + customClass + ' resize-none'"
-		:style="customStyle"
+		:style="'box-shadow: none;' + customStyle"
 		:placeholder="placeholder"
 		:value="value"
 		@change="$emit('update:value', $event.target.value)"
@@ -40,7 +40,7 @@ defineEmits(['update:value']);
 	<input
 		v-else
 		:class="defaultClass + ' ' + customClass"
-		:style="customStyle"
+        :style="'box-shadow: none;' + customStyle"
 		:placeholder="placeholder"
 		:value="value"
 		@change="$emit('update:value', $event.target.value)"
