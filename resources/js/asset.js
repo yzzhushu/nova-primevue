@@ -4,7 +4,6 @@ import Splitter from 'primevue/splitter';
 import SplitterPanel from 'primevue/splitterpanel';
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
-import HxTable from "./components/HxTable.vue";
 
 Nova.booting(app => {
     app.use(PrimeVue, {
@@ -69,5 +68,11 @@ Nova.booting(app => {
     app.component("SplitterPanel", SplitterPanel);
     app.component("DataTable", DataTable);
     app.component("Column", Column);
-    app.component("HxTable", HxTable);
+
+    const hxComponent = require.context('./components', true, /(Hx)\w+\.(vue)$/);
+    hxComponent.keys().forEach(fileName => {
+        const componentConfig = hxComponent(fileName)
+        const componentName = fileName.split('/').pop().replace(/\.\w+$/, '');
+        app.component(componentName, componentConfig.default || componentConfig)
+    })
 });

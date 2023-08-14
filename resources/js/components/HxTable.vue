@@ -14,19 +14,11 @@ const prop = defineProps({
         type: String,
         default: '320px'
     },
-    scrollerOption: {
-        type: JSON,
-        default: {
-            itemSize: 36
-        }
-    },
     pt: {
         type: JSON,
         default: {
             root: 'mt-1 mb-1',
-            headerrow: {
-                style: 'height: 32px'
-            }
+            headerrow: 'h-8'
         }
     }
 });
@@ -37,7 +29,7 @@ const emit = defineEmits(['row:selected']);
     <DataTable
         scrollable
         :scrollHeight="scrollHeight"
-        :virtualScrollerOptions="scrollerOption"
+        :virtualScrollerOptions="{itemSize: 32}"
         :value="lists"
         selectionMode="single"
         @rowSelect="emit('row:selected', $event)"
