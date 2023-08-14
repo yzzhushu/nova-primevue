@@ -26,8 +26,8 @@ const emit = defineEmits(['input:change']);
 <template>
 	<textarea
 		v-if="textArea"
-		:class="formCss + ' ' + customCss + ' hx-input-textarea'"
-		style="height: calc(100% - 1.5rem);resize: none;"
+		:class="formCss + ' ' + customCss + ' resize-none hx-input-textarea'"
+		style="height: calc(100% - 1.5rem);"
 		:placeholder="placeholder"
 		v-model="inputText"
 		@change="emit('input:change', inputText.value)"
