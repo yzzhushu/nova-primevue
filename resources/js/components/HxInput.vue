@@ -1,43 +1,49 @@
 <script setup>
-import {defineProps, defineEmits, ref} from "vue";
-
-const prop = defineProps({
-	textArea: {
+defineProps({
+	isTextArea: {
 		type: Boolean,
 		default: false
 	},
-	formCss: {
-		type: String,
-		default: 'w-full form-control form-input form-input-bordered border-none'
-	},
-	customCss: {
+	value: {
 		type: String,
 		default: ''
 	},
 	placeholder: {
 		type: String,
 		default: ''
+	},
+	customClass: {
+		type: String,
+		default: ''
+	},
+	customStyle: {
+		type: String,
+		default: ''
+	},
+	defaultClass: {
+		type: String,
+		default: 'w-full form-control form-input form-input-bordered border-none'
 	}
 });
-const inputText = ref('');
-const emit = defineEmits(['input:change']);
+defineEmits(['update:value']);
 </script>
 
 <template>
 	<textarea
-		v-if="textArea"
-		:class="formCss + ' ' + customCss + ' resize-none hx-input-textarea'"
-		style="height: calc(100% - 1.5rem);"
+		v-if="isTextArea"
+		:class="defaultClass + ' ' + customClass + ' resize-none hx-input-textarea'"
+		:style="customStyle"
 		:placeholder="placeholder"
-		v-model="inputText"
-		@change="emit('input:change', inputText)"
+		:value="value"
+		@change="$emit('update:value', $event.target.value)"
 	></textarea>
 	<input
 		v-else
-		:class="formCss + ' ' + customCss + ' hx-input-textarea'"
-		v-model="inputText"
+		:class="defaultClass + ' ' + customClass + ' hx-input-textarea'"
+		:style="customStyle"
 		:placeholder="placeholder"
-		@change="emit('input:change', inputText)"
+		:value="value"
+		@change="$emit('update:value', $event.target.value)"
 	>
 </template>
 

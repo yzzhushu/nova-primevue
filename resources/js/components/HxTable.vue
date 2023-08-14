@@ -1,7 +1,5 @@
 <script setup>
-import {defineProps, defineEmits} from "vue";
-
-const prop = defineProps({
+defineProps({
     lists: {
         type: Array,
         required: true
@@ -14,6 +12,12 @@ const prop = defineProps({
         type: String,
         default: '320px'
     },
+    scrollOption: {
+        type: JSON,
+        default: {
+            itemSize: 32
+        }
+    },
     pt: {
         type: JSON,
         default: {
@@ -22,17 +26,17 @@ const prop = defineProps({
         }
     }
 });
-const emit = defineEmits(['row:selected']);
+defineEmits(['row:selected']);
 </script>
 
 <template>
     <DataTable
         scrollable
         :scrollHeight="scrollHeight"
-        :virtualScrollerOptions="{itemSize: 32}"
+        :virtualScrollerOptions="scrollOption"
         :value="lists"
         selectionMode="single"
-        @rowSelect="emit('row:selected', $event)"
+        @rowSelect="$emit('row:selected', $event)"
         removableSort
         :pt="pt"
     >
