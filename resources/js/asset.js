@@ -23,7 +23,7 @@ Nova.booting(app => {
                 filtercontainer: 'w-full h-full form-control form-input form-input-bordered flex items-center justify-center',
                 filterinput: 'w-full h-full text-center outline-none bg-transparent',
                 emptymessage: 'mt-2',
-                item: 'cursor-pointer list-box-item'
+                item: 'cursor-pointer hx-line-column'
             },
             DataTable: {
                 root: 'w-full',
