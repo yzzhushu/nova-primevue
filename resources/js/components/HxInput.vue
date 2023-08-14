@@ -30,14 +30,14 @@ const emit = defineEmits(['input:change']);
 		style="height: calc(100% - 1.5rem);"
 		:placeholder="placeholder"
 		v-model="inputText"
-		@change="emit('input:change', inputText.value)"
+		@change="emit('input:change', inputText)"
 	></textarea>
 	<input
 		v-else
 		:class="formCss + ' ' + customCss + ' hx-input-textarea'"
 		v-model="inputText"
 		:placeholder="placeholder"
-		@change="emit('input:change', inputText.value)"
+		@change="emit('input:change', inputText)"
 	>
 </template>
 
