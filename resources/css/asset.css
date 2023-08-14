@@ -27,3 +27,10 @@
     transform-origin: 0 0;
     pointer-events: none;
 }
+.list-box-item {
+    line-height: 100%;
+}
+.list-box-item:hover {
+    color: #495057;
+    background: #e9ecef;
+}
