@@ -50,7 +50,8 @@ Nova.booting(app => {
                 root: 'w-full',
                 table: 'w-full divide-y divide-gray-100 dark:divide-gray-700',
                 thead: 'bg-gray-50 dark:bg-gray-800 top-0 z-10',
-                tbody: 'divide-y divide-gray-100 dark:divide-gray-700'
+                tbody: 'divide-y divide-gray-100 dark:divide-gray-700',
+                bodyrow: 'cursor-pointer',
             },
             Column: {
                 headercell: 'text-center',
@@ -74,5 +75,5 @@ Nova.booting(app => {
         const componentConfig = hxComponent(fileName)
         const componentName = fileName.split('/').pop().replace(/\.\w+$/, '');
         app.component(componentName, componentConfig.default || componentConfig)
-    })
+    });
 });

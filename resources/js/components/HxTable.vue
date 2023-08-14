@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const prop = defineProps({
     lists: {
         type: Array,
         required: true
@@ -10,22 +10,27 @@ defineProps({
     },
     scrollHeight: {
         type: String,
-        default: '320px'
+        default: '400px'
     },
     scrollOption: {
         type: JSON,
         default: {
-            itemSize: 32
+            itemSize: 40
         }
     },
     pt: {
         type: JSON,
         default: {
             root: 'mt-1 mb-1',
-            headerrow: 'h-8'
+            headerrow: {
+                style: 'height: 40px'
+            }
         }
     }
 });
+let options = prop.scrollOption;
+options.items = prop.lists;
+
 defineEmits(['row:selected']);
 </script>
 
@@ -33,7 +38,7 @@ defineEmits(['row:selected']);
     <DataTable
         scrollable
         :scrollHeight="scrollHeight"
-        :virtualScrollerOptions="scrollOption"
+        :virtualScrollerOptions="options"
         :value="lists"
         selectionMode="single"
         @rowSelect="$emit('row:selected', $event)"
