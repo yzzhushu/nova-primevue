@@ -41,16 +41,3 @@ defineEmits(['row:selected']);
         />
     </DataTable>
 </template>
-
-<style>
-.custom-data-table-border {
-    border-bottom-width: 1px;
-    border-bottom-color: rgba(var(--colors-gray-100));
-}
-.custom-data-table-border:last-child {
-    border-bottom-width: 0;
-}
-:is(.dark\:custom-data-table-border) {
-    border-bottom-color: rgba(var(--colors-gray-700));
-}
-</style>
