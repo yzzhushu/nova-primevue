@@ -29,8 +29,14 @@ Nova.booting(app => {
             },
             DataTable: {
                 root: 'w-full',
+                wrapper: 'relative',
+                resizehelper: {
+                    class: 'z-10 absolute hidden',
+                    style: 'width: 1px'
+                },
                 table: 'w-full',
                 thead: 'bg-gray-50 dark:bg-gray-800 top-0 z-10',
+                virtualscrollerspacer: 'flex',
                 bodyrow: 'cursor-pointer hx-list-column',
             },
             Column: {

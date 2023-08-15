@@ -26,7 +26,7 @@ defineEmits(['row:selected']);
         @rowSelect="$emit('row:selected', $event)"
         removableSort
         :pt="{
-            root: 'mt-1 mb-1',
+            root: 'mt-1 mb-1 relative',
             headerrow: 'h-10',
             bodyrow: 'h-10'
         }"
