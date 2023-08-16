@@ -35,7 +35,7 @@ Nova.booting(app => {
                     style: 'width: 1px'
                 },
                 table: 'w-full',
-                thead: 'bg-gray-50 dark:bg-gray-800 top-0 z-10',
+                thead: 'bg-gray-100 dark:bg-gray-700 top-0 z-10',
                 virtualscrollerspacer: 'flex',
                 bodyrow: 'cursor-pointer hx-list-column',
             },
