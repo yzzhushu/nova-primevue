@@ -31,3 +31,21 @@
     color: #495057;
     background: #e9ecef;
 }
+.p-tree-checked,
+.hx-list-column:hover :is(.dark .dark\:p-tree-checked) {
+    color: #ced4da;
+    border: 2px solid rgba(var(--colors-gray-900));
+    background-color: rgba(var(--colors-gray-900));
+}
+.p-tree-unchecked,
+.hx-list-column:hover :is(.dark .dark\:p-tree-unchecked) {
+    border: 2px solid rgba(var(--colors-gray-900));
+}
+:is(.dark .dark\:p-tree-checked) {
+    color: rgba(var(--colors-gray-900));
+    border: 2px solid #ced4da;
+    background-color: #ced4da;
+}
+:is(.dark .dark\:p-tree-unchecked) {
+    border: 2px solid #ced4da;
+}
