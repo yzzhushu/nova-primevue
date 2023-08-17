@@ -4,6 +4,7 @@ import Splitter from 'primevue/splitter';
 import SplitterPanel from 'primevue/splitterpanel';
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
+import Tree from "primevue/tree";
 
 Nova.booting(app => {
     app.use(PrimeVue, {
@@ -46,6 +47,9 @@ Nova.booting(app => {
                     class: 'ml-1',
                     style: 'margin-top: -4px;'
                 }
+            },
+            Tree: {
+                root: 'w-full mt-2 mb-2',
             }
         }
     });
@@ -55,6 +59,7 @@ Nova.booting(app => {
     app.component("SplitterPanel", SplitterPanel);
     app.component("DataTable", DataTable);
     app.component("Column", Column);
+    app.component("Tree", Tree);
 
     const hxComponent = require.context('./components', true, /(Hx)\w+\.(vue)$/);
     hxComponent.keys().forEach(fileName => {
