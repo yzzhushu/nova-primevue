@@ -53,15 +53,15 @@ Nova.booting(app => {
                 wrapper: 'w-full h-full overflow-auto',
                 container: 'm-0 p-0 list-none overflow-auto',
                 content: 'p-2 flex items-center cursor-pointer hx-list-column',
-                toggler: {
-                    class: 'w-6 h-6 mr-2 select-none',
+                toggler: ({props, state, context}) => ({
+                    class: (context.leaf ? 'invisible' : '') + ' w-6 h-6 mr-2 select-none',
                     style: 'color: #6c757d;'
-                },
+                }),
                 checkboxcontainer: 'w-6 h-6 mr-2 flex items-center',
-                checkbox: {
-                    class: 'rounded flex items-center justify-center',
+                checkbox: ({props, state, context}) => ({
+                    class: (context.checked ? 'p-tree-checked dark:p-tree-checked' : 'p-tree-unchecked dark:p-tree-unchecked') + ' rounded flex items-center justify-center',
                     style: 'width: 18px;height: 18px;'
-                },
+                }),
                 subgroup: {
                     style: 'margin-left: 1rem;'
                 },
