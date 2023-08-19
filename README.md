@@ -10,7 +10,9 @@
 
 ### Supported Components
 
-- Listbox Field
+- ListBox Field
+- MultiInput Field
+- TreeSelect Field
 
 ### Installation
 
