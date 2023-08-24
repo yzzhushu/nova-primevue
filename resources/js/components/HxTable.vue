@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
     lists: {
         type: Array,
         required: true
@@ -9,10 +9,13 @@ defineProps({
         required: true
     },
     scrollHeight: {
-        type: String,
-        default: '360px'
+        type: String
     }
 });
+if (props.scrollHeight === undefined) {
+    props.scrollHeight = Math.min(360, props.lists.length * 40 + 40) + 'px';
+}
+
 defineEmits(['row:selected']);
 </script>
 
