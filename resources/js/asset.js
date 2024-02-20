@@ -11,7 +11,7 @@ Nova.booting(app => {
         unstyled: true,
         pt: {
             Splitter: {
-                root: 'w-full rounded-lg form-input-bordered form-control form-input',
+                root: 'w-full rounded-lg form-control form-control-bordered form-input',
                 gutter: {
                     class: 'bg-gray-300 dark:bg-gray-700 ml-3 mr-3',
                     style: 'cursor: col-resize'
@@ -23,7 +23,7 @@ Nova.booting(app => {
             Listbox: {
                 root: 'w-full h-full text-center',
                 header: 'w-full h-10 mt-2 mb-2',
-                filtercontainer: 'w-full h-full form-control form-input form-input-bordered flex items-center justify-center',
+                filtercontainer: 'w-full h-full form-control form-control-bordered form-input flex items-center justify-center',
                 filterinput: 'w-full h-full text-center outline-none bg-transparent',
                 emptymessage: 'mt-2',
                 item: 'cursor-pointer hx-list-column'
