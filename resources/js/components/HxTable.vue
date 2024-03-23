@@ -40,7 +40,7 @@ defineEmits(['row:selected']);
             :field="column.field"
             :header="column.header"
             :sortable="column.sort"
-            :style="'width: ' + (column.width ? column.width : (1 / columns.length)) + '%'"
+            :style="'width: ' + (column.width ? column.width : (100 / columns.length)) + '%'"
         />
     </DataTable>
 </template>
